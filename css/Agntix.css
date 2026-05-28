@@ -18,6 +18,9 @@
 a,span,b,p{
     font-family: 'secound';
 }
+p{
+    color: #fff;
+}
 h1,h2,h3,h4,h5,h6{
     font-family: 'primary';
     color: #fff;
@@ -25,6 +28,7 @@ h1,h2,h3,h4,h5,h6{
 
 body{
     background-color: #0e0e10;
+    /* overflow-x: hidden; */
 }
 
 nav{
@@ -36,6 +40,7 @@ nav{
     backdrop-filter: blur(10px);
     background-color: #222326f6;
     padding-right: 30px;
+    z-index: 1000000000000000000000000000000000000000000000000000;
 
 }
 
@@ -88,6 +93,13 @@ nav .buttons{
     gap: 30px;
 }
 
+nav .buttons .btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 30px;
+}
 
 nav .buttons button{
     font-size: 16px;
@@ -436,7 +448,7 @@ header article .banners:last-child img:last-child{
     text-align: center;
     align-items: center;
     z-index: -1;
-    
+    position: relative;
 }
 .sec-heading p{
     font-size: 15px;
@@ -682,6 +694,10 @@ span{
 
 
 .features .sec-heading .titel{
+    background-image: url(../img/feature-2-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-size: 40px;
     white-space: nowrap;
 }
@@ -699,7 +715,7 @@ span{
 
 
 .features .icons .line .cell{
-    width: 100px;
+    width: calc(100% / 5);
     height: 100px;
 }
 
@@ -759,6 +775,10 @@ span{
 }
 
 
+.m2{
+    border-bottom:2px solid #1b1b1c;
+}
+
 .m2 .card{
     margin: 10px;
     padding: 20px;
@@ -791,3 +811,327 @@ span{
     font-size: 40px;
     
 }
+
+
+.m3{
+    margin: 0;
+    padding: 0 10%;
+    align-items: flex-start;
+    border-top: 2px solid #1b1b1c ;
+    border-bottom: 2px solid #1b1b1c ;
+    
+}
+
+
+.m3 .trade{
+    padding-top: 120px;
+}
+
+
+.m3 .sec-heading{
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 70px;
+}
+
+
+
+
+.m3 .sec-heading .titel{
+    font-size: 45px;
+}
+
+
+
+
+.m3 .trade .container{
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+
+
+
+.m3 .trade .container .card{
+    
+    margin-bottom: 15px;
+}
+
+
+
+
+.m3 .trade .container .card .content{
+    padding: 30px 0px 40px 40px;
+    border-left: 2px dashed #1b1b1c;
+    position: relative;
+}
+
+
+.m3 .trade .container .card .content::before{
+
+    position: absolute;
+    top: 45%;
+    left: -1px;
+    content: "";
+    width: 1px;
+    height: 30px;
+    display: inline-block;
+    background: linear-gradient(172deg, #926AFF 6.29%, #FF77B0 50.56%, #FEB267 92.25%);
+}
+
+
+.m3 .trade .container .card .content .icon{
+    margin-bottom: 30px;
+}
+
+
+
+
+.m3 .trade .container .card .content .icon span{
+    width: 56px;
+    height: 56px;
+    display: grid;
+    border-radius: 12px;
+    place-content: center;
+    text-align: center;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+
+
+/* .m3 .trade .container .card .content .text{
+
+
+} */
+
+.m3 .trade .container .card .content .text h4{
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+}
+
+
+.m3 .trade .container .card .content .text h4 a{
+    display: inline;
+    transition: all 0.3s linear;
+    background-repeat: no-repeat;
+    background-size: 0% 1px, 0 1px;
+    background-position: 100% 100%, 0 100%;
+    background-image: #fff;
+    color: #fff;
+    background-image: linear-gradient(currentcolor, currentcolor), linear-gradient(currentcolor, currentcolor);
+}
+
+
+
+
+.m3 .trade .container .card .content .text h4 a:hover{
+
+    background-size:0% 1px , 100% 1px ;
+}
+
+
+
+
+.m3 .trade .container .card .content .text p{
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 26px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.m4 .cir{
+    display: grid;
+    grid-template-columns: 1fr  2fr;
+    padding: 24px 24 24 0;
+}
+
+
+.m4 .cir .content1,.m4 .cir .ii{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 40px;
+    margin: 30px;
+    padding:0 20px;
+    text-align: start;
+    padding-bottom: 40px;
+}
+
+.m4 .cir .content1{
+    justify-content: space-between;
+}
+
+
+.m4 .cir .content1 .sup{
+    font-size: 35px;
+}
+
+.m4 .cir .content1>.btns{
+    display: flex;
+    gap: 20px;
+}
+
+.m4 .cir .content1>.btns>span{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: #1C1D1F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #515256;
+    color: #fff;
+    transition: 0.3s linear;
+    
+}
+
+.m4 .cir .content1>.btns>span:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+.m4 .cir .ii{
+    background-color: #131416;
+    border:  2px solid #1b1b1c;
+    text-align: center;
+    position: relative;
+    padding-top: 50px;
+    align-items: center;
+}
+
+.m4 .cir .ii h3{
+    font-size: 23px;
+    width: 83%;
+}
+
+.m4 .cir .ii .img{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+
+
+.m4 .cir .ii>img{
+    position: absolute;
+    top: 0;
+    width: 50%;
+    /* transform: translateX(50%); */
+    margin-bottom: 20px;
+}
+
+
+main .latest
+,main .unlock{
+    padding: 80px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border:  2px solid #1b1b1c;
+    justify-content: space-between;
+}
+
+main .latest .countainer{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    gap: 30px;
+    padding: 0 20px;
+}
+
+main .latest .countainer .card{
+    /* max-width:calc((100%-60px)/3) ; */
+    border-radius: 15px;
+    border: 2px solid #141617;
+}
+
+main .latest .countainer .card img{
+    border-radius: 15px;
+    width: 100%;
+}
+
+
+main .latest .countainer .card .info{
+    text-align: start;
+    padding: 15px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+
+main .latest .countainer .card .info p{
+    color: #e7dfae;
+}
+ .a {
+    display: inline;
+    color: #fff;
+    font-size: 27px; /* تم حذف التكرار القديم 35px */
+    text-decoration: none; /* عشان تشيل الخط الافتراضي بتاع اللينك */
+    transition: all 0.3s linear;
+    
+    /* هنا بنجهز الخط المخفي */
+    background-image: linear-gradient(#fff, #fff);
+    background-repeat: no-repeat;
+    background-position: left bottom; /* البداية من الشمال تحت */
+    background-size: 0% 1px; /* العرض في البداية 0% عشان يكون مخفي */
+}
+
+.a:hover {
+    background-size: 100% 1px; /* عند الهوفر العرض بيكبر لـ 100% من الشمال لليمين */
+}
+
+main .unlock img:last-child{
+    width: 100%;
+    margin-bottom: -60px;
+}
+
+main .unlock{
+    padding-bottom: 0;
+    /* background-image: url(../img/cta-thumb-bg.png);
+    background-repeat: no-repeat;
+    background-position: left bottom; */
+}
+
+
+
+
+.footeri{
+    width: 99vw;
+    position: relative;
+    top: -135px;
+}
+
+
+
+
+
+
